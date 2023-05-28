@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState } from 'react'
 import NavBar from './components/NavBar';
 import News from './components/News';
-import { BrowserRouter, Route, Routes,} 
+import { HashRouter, Route, Routes,} 
         from "react-router-dom";
         import LoadingBar from 'react-top-loading-bar'
 
@@ -18,7 +18,7 @@ const App =()=> {
   }
   document.body.style.backgroundColor="#E2EBF0";
     return (
-        <BrowserRouter>
+        <HashRouter >
         <LoadingBar
         color='blue'
         height={3}
@@ -37,7 +37,7 @@ const App =()=> {
           <Route exact path='/technology' element={<News setProgress={setprogress} apiKey={apiKey}key="technology" pageSize={5} country="in" category="technology"title="Technology"/>}/>
           </Routes>
 
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 export default App;
